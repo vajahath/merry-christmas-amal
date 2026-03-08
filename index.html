@@ -1,62 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="theme-color" content="rgb(39, 39, 39)" />
-    <title>Merry Christmas, Amal!</title>
-    <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <style>
-      .parallax-container {
-        height: 36em;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="parallax-container">
-      <div class="parallax"><img src="images/am1.jpg" /></div>
-      <h2 style="padding: 5px; color: white;">
-        <span style="background-color: black;">&nbsp;Merry&nbsp;</span>
-        <span style="background-color: black;">&nbsp;Christmas&nbsp;</span>
-        <span style="background-color: black;">&nbsp;Amal! 🎅&nbsp;</span>
-      </h2>
-    </div>
-    <div class="parallax-container">
-      <div class="parallax"><img src="images/am2.jpg" /></div>
-    </div>
-    <div class="parallax-container">
-      <div class="parallax"><img src="images/am3.jpg" /></div>
-    </div>
-    <div class="parallax-container">
-      <div class="parallax"><img src="images/am4.jpg" /></div>
-    </div>
-    <div class="parallax-container">
-      <div class="parallax"><img src="images/am5.jpg" /></div>
-    </div>
-    <div class="parallax-container">
-      <div class="parallax"><img src="images/am6.jpg" /></div>
-    </div>
-    <div class="parallax-container">
-      <div class="parallax"><img src="images/am7.jpg" /></div>
-    </div>
-    <div class="parallax-container" style="height: 5em;">
-      <p style="padding-left: 10px;">
-        Pics taken from Christmas Celebration at Cubet 2017 held by freshers.
-      </p>
-    </div>
-    <div class="parallax-container" style="height: 3em;">
-      <p style="padding-left: 10px;">
-        / <a href="https://twitter.com/vajahath7">Vajahath</a>
-      </p>
-    </div>
 
-    <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script type="module" src="./index.ts"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#0d1b1e" />
+  <title>Merry Christmas, Amal! 🎄</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Application Styles -->
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+  <!-- Background Snow Effect -->
+  <div id="snow-container"></div>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Merry Christmas, Amal! 🎅</h1>
+      <p>A heartfelt collection of memories and a huge thank you for being a wonderful friend. Since 2017, every
+        Christmas has been more special because of you.</p>
+    </div>
+  </header>
+
+  <main class="gallery" id="gallery-container">
+    <figure class="photo-card" data-index="1">
+      <img src="images/am1.jpg" alt="Moment 1" loading="lazy">
+      <figcaption class="photo-info">2017 Memories ❄️</figcaption>
+    </figure>
+    <figure class="photo-card" data-index="2">
+      <img src="images/am2.jpg" alt="Moment 2" loading="lazy">
+      <figcaption class="photo-info">Warm Holiday Joy ✨</figcaption>
+    </figure>
+    <figure class="photo-card" data-index="3">
+      <img src="images/am3.jpg" alt="Moment 3" loading="lazy">
+      <figcaption class="photo-info">Cubet Freshers 🎄</figcaption>
+    </figure>
+    <figure class="photo-card" data-index="4">
+      <img src="images/am4.jpg" alt="Moment 4" loading="lazy">
+      <figcaption class="photo-info">Festive Smiles 🎁</figcaption>
+    </figure>
+    <figure class="photo-card" data-index="5">
+      <img src="images/am5.jpg" alt="Moment 5" loading="lazy">
+      <figcaption class="photo-info">Celebration Time 🥂</figcaption>
+    </figure>
+    <figure class="photo-card" data-index="6">
+      <img src="images/am6.jpg" alt="Moment 6" loading="lazy">
+      <figcaption class="photo-info">Sharing the Spirit ❄️</figcaption>
+    </figure>
+    <figure class="photo-card" data-index="7">
+      <img src="images/am7.jpg" alt="Moment 7" loading="lazy">
+      <figcaption class="photo-info">Lasting Bonds ❤️</figcaption>
+    </figure>
+  </main>
+
+  <div class="gratitude-note">
+    <p style="color: var(--text-gray); font-style: italic; font-size: 1.1rem; line-height: 1.8;">
+      Reflecting back, these photos capture more than just moments—they capture the warmth, the laughter, and the
+      incredible journey we've shared. Thank you for always bringing your spark to the holidays.
+    </p>
+    <div class="signature-reveal">
+      With Love, Vajahath
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal">
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Full Screen Memory">
+    </div>
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <footer>
+    <p>With gratitude and warm wishes, <a href="https://twitter.com/vajahath7" target="_blank"
+        rel="noopener noreferrer">Vajahath</a></p>
+    <p style="font-size: 0.8rem; margin-top: 1rem;">© 2026 Merry Christmas Amal - Gratitude Edition</p>
+  </footer>
+
+  <script type="module" src="./index.ts"></script>
+</body>
+
 </html>
