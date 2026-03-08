@@ -1,3 +1,5 @@
+import { LikeCounter } from "@vaju/personal-like-counter";
+
 /**
  * Modern Christmas Gratitude Logic
  */
@@ -15,6 +17,7 @@ class ChristmasApp {
     this.createSnowflakes();
     this.setupIntersectionObserver();
     this.setupLightbox();
+    this.setupLikeCounter();
   }
 
   /**
@@ -107,6 +110,44 @@ class ChristmasApp {
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeLightbox();
     });
+  }
+
+  /**
+   * Setup personal like counter
+   */
+  private setupLikeCounter(): void {
+    const counter = new LikeCounter({
+      doc: "merry-christmas-amal",
+    });
+
+    const likeBtn = document.getElementById('like-btn');
+    const likeCountLabel = document.getElementById('like-count');
+    const syncLabel = document.getElementById('sync-status');
+
+    if (likeBtn && likeCountLabel && syncLabel) {
+      // Subscribe to counts
+      counter.likes$.subscribe(count => {
+        likeCountLabel.textContent = count.toString();
+      });
+
+      // Subscribe to sync status
+      counter.syncing$.subscribe(isSyncing => {
+        if (isSyncing) {
+          syncLabel.classList.add('active');
+          syncLabel.textContent = 'Saving...';
+        } else {
+          syncLabel.classList.remove('active');
+        }
+      });
+
+      // Handle Click
+      likeBtn.addEventListener('click', () => {
+        counter.incrementLike();
+        // Visual feedback
+        likeBtn.classList.add('active');
+        setTimeout(() => likeBtn.classList.remove('active'), 200);
+      });
+    }
   }
 }
 

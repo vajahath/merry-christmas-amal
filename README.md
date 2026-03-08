@@ -1,4 +1,4 @@
-# ❄️ Merry Christmas, Amal!
+# ❄️ Merry Christmas, Amal! [![Deploy to GitHub Pages](https://github.com/vajahath/merry-christmas-amal/actions/workflows/deploy.yml/badge.svg)](https://github.com/vajahath/merry-christmas-amal/actions/workflows/deploy.yml)
 
 A modernized festive gratitude page celebrating holiday memories from 2017 to today.
 

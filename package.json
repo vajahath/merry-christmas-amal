@@ -15,5 +15,8 @@
     "devDependencies": {
         "typescript": "^5.7.3",
         "vite": "^6.2.0"
+    },
+    "dependencies": {
+        "@vaju/personal-like-counter": "^1.0.6"
     }
 }
