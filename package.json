@@ -1,0 +1,14 @@
+{
+    "name": "merry-christmas-amal",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./dist/index.html",
+    "type": "module",
+    "scripts": {
+        "dev": "bun index.html",
+        "build": "rm -rf ./dist && bun build index.html --outdir=./dist --minify --production --minify-whitespace --target=browser"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
