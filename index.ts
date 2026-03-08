@@ -1,3 +1,4 @@
+import $ from 'jquery';
 declare const M: any;
 
 document.addEventListener("DOMContentLoaded", function () {
