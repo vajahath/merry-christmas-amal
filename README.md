@@ -1,6 +1,7 @@
 # ❄️ Merry Christmas, Amal! [![Deploy to GitHub Pages](https://github.com/vajahath/merry-christmas-amal/actions/workflows/deploy.yml/badge.svg)](https://github.com/vajahath/merry-christmas-amal/actions/workflows/deploy.yml)
 
-A modernized festive gratitude page celebrating holiday memories from 2017 to today.
+A modernized festive gratitude page celebrating holiday memories from 2017 to today. This page was created for Amal during the Christmas season game **'my christmas friend'**.
+
 
 ## 🛠️ Tech Stack
 
